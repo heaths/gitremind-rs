@@ -9,7 +9,8 @@
                 "args": [
                     "test",
                     "--no-run",
-                    "--lib"
+                    "--lib",
+                    "--package=gitremind"
                 ]
             },
             "args": [],
@@ -22,10 +23,11 @@
             "cargo": {
                 "args": [
                     "build",
-                    "--bin=main"
+                    "--bin=git-remind",
+                    "--package=gitremind"
                 ],
                 "filter": {
-                    "name": "main",
+                    "name": "git-remind",
                     "kind": "bin"
                 }
             },

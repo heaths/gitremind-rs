@@ -1,14 +1,23 @@
 [package]
-name = "template"
+name = "gitremind"
 version = "0.1.0"
 edition = "2021"
 authors = [
     "Heath Stewart (https://github.com/heaths)"
 ]
 description = """
-A template repository for Rust projects.
+Create git commit and push hooks to remind you of tasks.
 """
 repository = "https://github.com/heaths/template-rustlang"
 license = "MIT"
 
 [dependencies]
+clap = { version = "4.0.22", features = ["derive", "cargo"] }
+serde = { version = "1.0.147", features = ["derive"] }
+serde_yaml = "0.9.14"
+term = "0.7.0"
+thiserror = "1.0.37"
+
+[[bin]]
+name = "git-remind"
+path = "src/bin/main.rs"
