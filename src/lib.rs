@@ -30,5 +30,5 @@ pub enum Error {
     Io(#[from] std::io::Error),
 
     #[error("failed to write to terminal: {0}")]
-    Terminal(#[from] term::Error),
+    Terminal(#[from] ctrlc::Error),
 }

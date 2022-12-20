@@ -13,10 +13,15 @@ license = "MIT"
 
 [dependencies]
 clap = { version = "4.0.22", features = ["derive", "cargo"] }
+console = { version = "0.15.2", features = ["windows-console-colors"] }
+ctrlc = { version = "3.2.3", features = ["termination"] }
 serde = { version = "1.0.147", features = ["derive"] }
 serde_yaml = "0.9.14"
-term = "0.7.0"
 thiserror = "1.0.37"
+
+[profile.release]
+split-debuginfo = "packed"
+strip = "symbols"
 
 [[bin]]
 name = "git-remind"
